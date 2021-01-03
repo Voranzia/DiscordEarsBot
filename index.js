@@ -379,8 +379,8 @@ function process_commands_query(txt, mapKey, user) {
 //////////////////////////////////////////
 async function transcribe(file) {
 
-  return transcribe_witai(file)
-  // return transcribe_gspeech(file)
+  // return transcribe_witai(file)
+  return transcribe_gspeech(file)
 }
 
 // WitAI
@@ -437,7 +437,7 @@ async function transcribe_gspeech(file) {
       const config = {
         encoding: 'LINEAR16',
         sampleRateHertz: 48000,
-        languageCode: 'en-US',  // https://cloud.google.com/speech-to-text/docs/languages
+        languageCode: 'fr-FR',  // https://cloud.google.com/speech-to-text/docs/languages
       };
       const request = {
         audio: audio,
